@@ -48,7 +48,8 @@ st.set_page_config(
 	page_icon=None,  # String, anything supported by st.image, or None.
 )
 
-d_acidentes = pd.read_excel(r'demostrativo_acidentes_riosp.xlsx')
+demonstrativo = "demostrativo_acidentes_riosp.xlsx"
+d_acidentes = pd.read_excel(demonstrativo)
 
 def main():
 
