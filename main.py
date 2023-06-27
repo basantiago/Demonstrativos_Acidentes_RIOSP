@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 ### Importando dataframes
 
 # Diretório onde os arquivos CSV estão localizados
-diretorio = "C:/Users/barba/OneDrive/Dataframes"
+diretorio = "Dataframes"
 
 # Dicionário para armazenar os dataframes
 dataframes = {}
@@ -45,7 +45,7 @@ st.set_page_config(
 	page_icon=None,  # String, anything supported by st.image, or None.
 )
 
-d_acidentes = pd.read_excel(r'C:/Users/barba/OneDrive/demostrativo_acidentes_riosp.xlsx')
+d_acidentes = pd.read_excel(r'demostrativo_acidentes_riosp.xlsx')
 
 def main():
 
@@ -130,7 +130,7 @@ st.plotly_chart(figura)
 ## Boston Housing
 
 
-path = "C:/Users/barba/OneDrive/BostonData.xlsx"
+path = "BostonData.xlsx"
 data = pd.read_excel(path)  # Importar o dataframe a partir do arquivo CSV
 print(data)
 
