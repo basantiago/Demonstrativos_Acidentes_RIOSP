@@ -220,35 +220,3 @@ st.write('Após uma análise inicial dos dados de MEDV \
         quartil (25.0) para o valor máximo (50.0), dessa forma é possível\
         afirmar que há, na distribuição, uma cauda grossa para a direita \
         (valores superiores à média global).')
-
-
-###### Grafico 3
-
-st.subheader('Matriz de Correlação')
-
-df = pd.DataFrame(data)
-
-# Calcular a matriz de correlação
-correlation_matrix = df.corr()
-
-# Criar o corrplot usando plotly
-fig = px.imshow(correlation_matrix, color_continuous_scale='RdBu')
-
-# Configurar o layout do gráfico
-fig.update_layout(
-    title='Matriz de Correlação',
-    xaxis=dict(tickangle=-45),
-    yaxis=dict(tickangle=0),
-)
-
-# Exibir o gráfico no Streamlit
-st.plotly_chart(fig)
-# Exibir o texto ao lado do gráfico
-st.write("Fica evidente que há uma forte correlação positiva \
-                de MEDV com rm (nº quartos) e uma forte correlação negativa \
-                com lstat (% populacao baixa renda). Ambas as variáveis também\
-                possuem correlação negativa relevante entre si, o que faz \
-                sentido, pois em localidades em que a porcentagem de \
-                população de baixa renda é menor, tendem a existir moradias mais\
-                simples, o que acarreta em um nº de quartos menor e, em conjunto,\
-                um valor também inferior, quando comparado à média.")
